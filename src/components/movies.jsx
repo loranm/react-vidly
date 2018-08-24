@@ -31,9 +31,7 @@ class Movies extends Component {
 
   render() {
     const { length: count } = this.state.movies;
-
     if (count === 0) return <p>There are no movies in the database.</p>;
-
     const movies = paginate(this.state.movies, this.state.currentPage, this.state.pageSize);
     return (
       <React.Fragment>
